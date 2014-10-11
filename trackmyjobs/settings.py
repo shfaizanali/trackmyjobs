@@ -66,8 +66,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'trackmyjobs',                      # Or path to database file if using sqlite3.
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'faizan',
+        'PASSWORD': 'admin123',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
@@ -91,4 +91,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://trackmyjobs.esketchers.com/static/'
+STATIC_ROOT = '/home/esketchers/webapps/trackmyjobs_static/'
