@@ -21,6 +21,9 @@ class ApiKeyView(APIView):
             return Response(status=status.HTTP_204_NO_CONTENT)
         
 class CoordsView(APIView):
+    def get(self,request):
+        return Response(status=status.HTTP_200_OK)
+    
     def post(self,request):
         try:
             data = request.DATA    
@@ -28,7 +31,6 @@ class CoordsView(APIView):
             coords = Coords()    
             coords.user_api = api
             coords.message = data['message']
-            coords.state = data['state']
             coords.coords = json.dumps(data['coords'])
             coords.save()
             return Response(status=status.HTTP_200_OK)
